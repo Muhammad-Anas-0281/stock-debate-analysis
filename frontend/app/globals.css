@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design System Variables ─────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --background: #080d1a;
+  --background-2: #0d1427;
+  --card: #111827;
+  --card-hover: #161f35;
+  --card-border: rgba(255, 255, 255, 0.07);
+
+  /* Text */
+  --foreground: #f0f4ff;
+  --muted: #94a3b8;
+  --muted-foreground: #64748b;
+
+  /* Brand accent */
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.25);
+
+  /* Agent colors */
+  --bull: #22c55e;
+  --bull-bg: rgba(34, 197, 94, 0.1);
+  --bull-border: rgba(34, 197, 94, 0.3);
+
+  --bear: #ef4444;
+  --bear-bg: rgba(239, 68, 68, 0.1);
+  --bear-border: rgba(239, 68, 68, 0.3);
+
+  --neutral-agent: #8b5cf6;
+  --neutral-bg: rgba(139, 92, 246, 0.1);
+  --neutral-border: rgba(139, 92, 246, 0.3);
+
+  --judge: #f59e0b;
+  --judge-bg: rgba(245, 158, 11, 0.1);
+  --judge-border: rgba(245, 158, 11, 0.3);
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #3b82f6;
+
+  /* Font families */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ─── Base Styles ─────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+/* ─── Card Styles ─────────────────────────────────────────────────────────── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+}
+
+.card-hover {
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.card-hover:hover {
+  background: var(--card-hover);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+/* ─── Agent Card Borders ──────────────────────────────────────────────────── */
+.agent-bull { border-color: var(--bull-border); background: var(--bull-bg); }
+.agent-bear { border-color: var(--bear-border); background: var(--bear-bg); }
+.agent-neutral { border-color: var(--neutral-border); background: var(--neutral-bg); }
+.agent-judge { border-color: var(--judge-border); background: var(--judge-bg); }
+
+/* ─── Verdict Badge ───────────────────────────────────────────────────────── */
+.verdict-buy   { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.4); }
+.verdict-sell  { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.4); }
+.verdict-hold  { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.4); }
+
+/* ─── Button ──────────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { background: var(--card); color: var(--foreground); }
+
+/* ─── Input ───────────────────────────────────────────────────────────────── */
+.input {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.input::placeholder { color: var(--muted-foreground); }
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+
+/* ─── Debate Stream Animation ─────────────────────────────────────────────── */
+@keyframes agentTyping {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.agent-typing span {
+  animation: agentTyping 1.2s ease-in-out infinite;
+}
+.agent-typing span:nth-child(2) { animation-delay: 0.2s; }
+.agent-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer {
+  background: linear-gradient(90deg, var(--card) 25%, var(--card-hover) 50%, var(--card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ─── Progress Bar ────────────────────────────────────────────────────────── */
+.progress-bar {
+  height: 4px;
+  background: var(--card-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+/* ─── Grid Layouts ────────────────────────────────────────────────────────── */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ─── Confidence Meter ────────────────────────────────────────────────────── */
+.confidence-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--danger), var(--warning), var(--success));
+  position: relative;
+}

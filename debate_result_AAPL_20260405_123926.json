@@ -1,0 +1,70 @@
+{
+  "ticker": "AAPL",
+  "timestamp": "2026-04-05T12:39:26.738139",
+  "model": "mixtral-8x7b-32768",
+  "market_data_summary": {
+    "company_name": "Unknown Company",
+    "sector": "Unknown",
+    "sma_50": {},
+    "sma_200": {}
+  },
+  "bull_analysis": {
+    "agent": "Bull Agent",
+    "stance": "BULLISH",
+    "ticker": "AAPL",
+    "headline": "Analysis temporarily unavailable",
+    "key_arguments": [],
+    "growth_catalysts": [],
+    "target_upside": "N/A",
+    "key_metrics": {},
+    "confidence": 0,
+    "summary": "Bull analysis could not be completed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "error": "Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+  },
+  "bear_analysis": {
+    "agent": "Bear Agent",
+    "stance": "BEARISH",
+    "ticker": "AAPL",
+    "headline": "Risk analysis temporarily unavailable",
+    "bull_rebuttals": [],
+    "independent_risks": [],
+    "downside_scenarios": [],
+    "key_metrics_concern": {},
+    "confidence": 0,
+    "summary": "Bear analysis could not be completed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "error": "Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+  },
+  "neutral_analysis": {
+    "agent": "Neutral Agent",
+    "stance": "NEUTRAL",
+    "ticker": "AAPL",
+    "headline": "Balanced analysis temporarily unavailable",
+    "bull_merit_score": 0,
+    "bear_merit_score": 0,
+    "strongest_bull_points": [],
+    "strongest_bear_points": [],
+    "key_risk_reward": {},
+    "critical_watchpoints": [],
+    "balanced_assessment": "Neutral analysis could not be completed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "preliminary_lean": "HOLD",
+    "confidence": 0,
+    "summary": "Neutral analysis failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "error": "Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+  },
+  "judge_verdict": {
+    "agent": "Judge Agent",
+    "final_verdict": "HOLD",
+    "verdict_strength": "HOLD",
+    "confidence_score": 0,
+    "ticker": "AAPL",
+    "headline": "Verdict synthesis temporarily unavailable",
+    "verdict_rationale": "Judge synthesis failed: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "key_arguments_synthesis": {},
+    "identified_risks": [],
+    "price_targets": {},
+    "investment_horizon": "N/A",
+    "source_citations": [],
+    "summary": "Could not complete verdict: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+    "error": "Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}"
+  }
+}
